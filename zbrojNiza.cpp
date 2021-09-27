@@ -17,13 +17,12 @@ int main(int argc, const char * argv[]) {
     
     while (limun != "stop") {
 
-
         try
         {
             printf("\n Upiši broj:");
             cin >> limun;
             int strToInt = stoi(limun);
-            //printf("strToNum= : %i \n", limun);
+            printf("strToNum= : %s \n", limun.c_str());
 
             int suma  = 0;
             for (int i= 1; i<= strToInt; i ++) {
