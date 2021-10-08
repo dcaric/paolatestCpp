@@ -12,30 +12,33 @@ using namespace std;
 
 
 
-void leptirFunkcija(string limun) {
-    try
-    {
-        printf("\n Upiši broj:");
-        cin >> limun;
-        int suma  = 0;
-        for (int i= 1; i<= stoi(limun); i ++) suma = suma +i;
-        printf("Zbroj brojeva je: %i \n", suma);
+void leptirFunkcija(string rijecZaKraj) {
+    string unos;
+     while (unos != rijecZaKraj)  { 
+        try
+        {
+            
+            printf("\n Upiši broj:");
+            cin >> unos;
+            int suma  = 0;
+            for (int i= 1; i<= stoi(unos); i ++) suma = suma +i;
+            printf("Zbroj brojeva je: %i \n", suma);
+        }
+        catch(const std::exception& e)
+        {
+            if (unos != rijecZaKraj) printf("Upisao si krivi podatak. Rijec se ne moze pretvoriti u broj ili ta rijes nije %s !\n",rijecZaKraj.c_str());
+        }
     }
-    catch(const std::exception& e)
-    {
-        if (limun != "stop") printf("Upisao si krivi podatak. Rijec se ne moze pretvoriti u broj ili ta rijes nije STOP !\n");
-    }
+    
 }
-
 
 
 int main(int argc, const char * argv[]) {
     
-    string limun = "";
-    
-    while (limun != "stop") {
-        leptirFunkcija(limun);
-    }
+    printf("\n Upiši riječ za prekinuti program:");
+    string stopRijec;
+    cin >> stopRijec;
+    leptirFunkcija(stopRijec);
+  
     printf("PROGRAM JE GOTOV \n");
 }
-
