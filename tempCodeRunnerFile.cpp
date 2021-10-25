@@ -1,1 +1,1 @@
-izbor
+c_str()
