@@ -77,14 +77,16 @@ void ispisRijeci() {
     string recenica = "";
     string jednaRijec = "";
 
+    string myArray[] = {"dario", "paola"};
+    myArray->append("macka");
     
     vector<string> rijeci; // vektor stringova (polje stringova)
     map<string, int> myMap; // mapa stringova
 
     cin.ignore();
-
     printf("Upisi jednu recenicu:");
     getline(cin, recenica);
+
     printf("\n");
     stringstream myStream(recenica); // stringstream razlomi recenicu u niz rijeci nakon svakog SPACA - posebni tip podatka stream
 
